@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+  max-width: 100%;
+ 
+  max-height: 100vh;
+}
+
+.main_div {
+  width: 100%;
+ 
+  height: 100vh;
+  background: #e0ded9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.center_div {
+  /* min-width: 28%; */
+  min-width: 28%;
+  /* width: 30%; */
+  max-height: 100%;
+  /* height: 80vh; */
+  height: auto;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+}
+.date {
+  display: flex;
+  position: sticky;
+  max-height: 100%;
+  min-width: 100%;
+  color: #454545;
+}
+.left {
+  margin: 50px -25px;
+  cursor: pointer;
+  padding-top: 22px;
+  font-size: 0.8rem;
+}
+.date-size {
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+.month-size {
+  font-size: 0.8rem;
+  margin-left: 8px;
+
+  padding-top: 40px;
+}
+.dname {
+  padding-top: 40px;
+  padding-left: 55%;
+  position: sticky;
+  /* min-width: 100%; */
+
+}
+.forpadding1 {
+  padding-left: 30px;
+  padding-top: 12px;
+  color: #999999;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.forpadding {
+  padding-top: 12px;
+  padding-left: 30px;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.plus {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #7fd88df3;
+
+  color: #918d86;
+  font-size: 40px;
+  border: none;
+  font-size: 40px;
+
+  outline: none;
+  text-align: center;
+
+  margin: auto;
+  margin-top: 100px;
+}
+.fas {
+  min-height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #7fd88df3;
+
+  color: #918d86;
+  font-size: 20px;
+  border: none;
+
+  float: right;
+  margin-right: 20px;
+  outline: none;
+  text-align: center;
+}
