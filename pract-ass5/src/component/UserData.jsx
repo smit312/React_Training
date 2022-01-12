@@ -13,7 +13,7 @@ const UserData = [
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar1} />,
     name: "peter",
-    email: "abcd@gmail.com",
+    email: "peter@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
@@ -26,50 +26,48 @@ const UserData = [
     ),
     Access: (
       <div class="dropdown">
-        <p class="dropbtn">
-          owner <img src={down} />
-        </p>
-        <div class="dropdown-content">
-          <a href="#"> Manager</a>
-          <a href="#"> Read</a>
-          <a href="#"> inactive</a>{" "}
-        </div>
+        <p class="dropbtn">owner</p>
       </div>
     ),
     action: <Icon.Lock />,
+    reviewd: 450,
+    monthly: 5000,
+    plan: "Standard",
   },
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar2} />,
-    name: "peter",
-    email: "abcd@gmail.com",
+    name: "smit",
+    email: "smit@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
-          active <img src={down} />
+          inactive <img src={down} />
         </p>
         <div class="dropdown-content">
-          <a href="#"> inactive</a>
+          <a href="#"> active</a>
         </div>
       </div>
     ),
     Access: (
       <div class="dropdown">
         <p class="dropbtn">
-          owner <img src={down} className="down" />
+          Manager <img src={down} className="down" />
         </p>
         <div class="dropdown-content">
-          <a href="#"> Manager</a>
           <a href="#"> Read</a>
           <a href="#"> inactive</a>{" "}
         </div>
       </div>
     ),
     action: <Icon.Trash2 />,
+    reviewd: 4500,
+    monthly: 5000,
+    plan: "Unstandard",
   },
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar3} />,
-    name: "peter",
-    email: "abcd@gmail.com",
+    name: "mitul",
+    email: "mitul@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
@@ -83,21 +81,23 @@ const UserData = [
     Access: (
       <div class="dropdown">
         <p class="dropbtn">
-          owner <img src={down} />
+          Read <img src={down} />
         </p>
         <div class="dropdown-content">
           <a href="#"> Manager</a>
-          <a href="#"> Read</a>
           <a href="#"> inactive</a>{" "}
         </div>
       </div>
     ),
     action: <Icon.Trash2 />,
+    reviewd: 1000,
+    monthly: 5000,
+    plan: "Standard",
   },
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar4} />,
     name: "peter",
-    email: "abcd@gmail.com",
+    email: "peter@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
@@ -121,11 +121,14 @@ const UserData = [
       </div>
     ),
     action: <Icon.Trash2 />,
+    reviewd: 4950,
+    monthly: 5000,
+    plan: "Unstandard",
   },
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar5} />,
-    name: "peter",
-    email: "abcd@gmail.com",
+    name: "jeet",
+    email: "jeet@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
@@ -149,11 +152,14 @@ const UserData = [
       </div>
     ),
     action: <Icon.Trash2 />,
+    reviewd: 750,
+    monthly: 5000,
+    plan: "Basic",
   },
   {
     imgavtar: <Avatar alt="Remy Sharp" src={avtar6} />,
-    name: "peter",
-    email: "abcd@gmail.com",
+    name: "adarsh",
+    email: "adarsh@gmail.com",
     status: (
       <div class="dropdown">
         <p class="dropbtn">
@@ -177,6 +183,9 @@ const UserData = [
       </div>
     ),
     action: <Icon.Trash2 />,
+    reviewd: 3350,
+    monthly: 5000,
+    plan: "Standard",
   },
 ];
 export default UserData;

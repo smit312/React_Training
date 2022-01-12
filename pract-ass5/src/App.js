@@ -1,76 +1,76 @@
 import "./App.css";
-
 import UserList from "./component/UserList";
 import UserData from "./component/UserData";
-import avtar4 from "./images/avtar4.jpg";
-// console.log(UserData[0].name);
+import { useState } from "react";
 function App() {
+  const [inHover, setHover] = useState(false);
   return (
-    <>
-    <div class="card">
-  <img src={avtar4} alt="Avatar" className="imgset"/>
-  <div class="container">
-    <h4><b>John Doe</b></h4> 
-    <p>Architect & Engineer</p> 
-  </div>
-</div>
-      <table >
+    <div className="main">
+      <table>
         <tr>
           <th className="settitle1">Name</th>
           <th className="settitle2">Status</th>
           <th className="settitle3"> Access</th>
         </tr>
       </table>
-      <UserList
-        imgavtar={UserData[0].imgavtar}
-        name={UserData[0].name}
-        email={UserData[0].email}
-        status={UserData[0].status}
-        Access={UserData[0].Access}
-        action={UserData[0].action}
-      />
-      <UserList
-        imgavtar={UserData[1].imgavtar}
-        name={UserData[1].name}
-        email={UserData[1].email}
-        status={UserData[1].status}
-        Access={UserData[1].Access}
-        action={UserData[1].action}
-      />
-      <UserList
-        imgavtar={UserData[2].imgavtar}
-        name={UserData[2].name}
-        email={UserData[2].email}
-        status={UserData[2].status}
-        Access={UserData[2].Access}
-        action={UserData[2].action}
-      />
-      <UserList
-        imgavtar={UserData[3].imgavtar}
-        name={UserData[3].name}
-        email={UserData[3].email}
-        status={UserData[3].status}
-        Access={UserData[3].Access}
-        action={UserData[3].action}
-      />
-      <UserList
-        imgavtar={UserData[4].imgavtar}
-        name={UserData[4].name}
-        email={UserData[4].email}
-        status={UserData[4].status}
-        Access={UserData[4].Access}
-        action={UserData[4].action}
-      />
-      <UserList
-        imgavtar={UserData[5].imgavtar}
-        name={UserData[5].name}
-        email={UserData[5].email}
-        status={UserData[5].status}
-        Access={UserData[5].Access}
-        action={UserData[5].action}
-      />
-      
-    </>
+      {/* start to disply data into card */}
+      <div className="main2">
+        {inHover && (
+          <p className="hover">
+            <div class="card">
+              <center>
+                {
+                  <img
+                    src={inHover.imgavtar.props.src}
+                    alt="Avatar"
+                    className="imgset"
+                  />
+                }
+                <div class="container">
+                  <h4>{inHover.name} </h4>
+                  <p className="cardname">{inHover.email}</p>
+                </div>
+                <button className="cardbtn">
+                  <b>Active User</b>
+                </button>
+                <br />
+                <h3 className="plan">Your Plan : {inHover.plan}</h3>
+                <p className="progbar">plan Uses</p>
+                <progress value={inHover.reviewd} max="5000"></progress>
+                <br />
+                <h3 className="clicks">
+                  <div className="cnum">
+                    {inHover.reviewd}
+                    <div className="ctext">Clicks reviewd</div>
+                  </div>
+                  <br /> <div className="vl"></div>
+                  <div className="montclick">
+                    {inHover.monthly}
+                     <div className="mont" >Monthly Clicks</div>
+                  </div>
+                </h3>
+              </center>
+            </div>
+          </p>
+        )}
+        {/* end to disply data into card */}
+        {UserData.map((user, index) => {
+          return (
+            <UserList
+              key={index}
+              setHover={setHover}
+              imgavtar={user.imgavtar}
+              name={user.name}
+              email={user.email}
+              status={user.status}
+              Access={user.Access}
+              action={user.action}
+              user={user}
+            />
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

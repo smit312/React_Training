@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+
 import "../App.css";
 
 export const UserList = (props) => {
-  const [inHover, setHover] = useState(false);
   return (
-    <div>
+    <>
+     
+    <div
+      onMouseEnter={() => {
+        props.setHover(props.user); // fetching data for user
+      }}
+      onMouseLeave={() => props.setHover(false)}
+    >
       <div className="container">
         <table>
-          <tr
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-          >
-            {inHover && <p className="hover">Hi!</p>}
+          <tr>
             <td className="set">
               {props.imgavtar}
               <p className="setitem">
@@ -27,6 +30,7 @@ export const UserList = (props) => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 export default UserList;
