@@ -1,0 +1,50 @@
+import React from "react";
+import Avatar from '@mui/material/Avatar';
+import logo from '../logo.svg';
+import '../App.css';
+import * as Icon from 'react-feather';
+import  avtar1 from "../images/avtar1.jpg";
+export const UserList = () => {
+
+  return (
+    <div>
+   
+      <div className="container">
+      <table>
+        <tr>
+          <th className="settitle1">Name</th>
+          <th className="settitle2">Status</th>
+          <th className="settitle3"> Access</th>
+        </tr>
+        <tr>
+            
+          <td className="set"><Avatar alt="Remy Sharp" src={avtar1}/><p className="setitem">Peter<br/>abcd@gmail.com</p></td>
+          <td>Active</td>
+          <td>owner</td>
+          <td><Icon.Lock /></td>
+        </tr>
+        <tr>
+        <td className="set"><Avatar alt="Remy Sharp" src={logo}/><p className="setitem">Peter<br/>abcd@gmail.com</p></td>
+          <td>Active</td>
+          <td>owner</td>
+          <td><Icon.Trash2 /></td>
+        </tr>
+        <tr>
+        <td className="set"><Avatar alt="Remy Sharp" src={logo}/><p className="setitem">Peter<br/>abcd@gmail.com</p></td>
+          <td>Active</td>
+          <td>owner</td>
+          <td><Icon.Trash2 /></td>
+        </tr>
+        <tr>
+        <td className="set"><Avatar alt="Remy Sharp" src={logo}/><p className="setitem">Peter<br/>abcd@gmail.com</p></td>
+          <td>Active</td>
+          <td>owner</td>
+          <td><Icon.Trash2 /></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  );
+};
+export default UserList;
+
