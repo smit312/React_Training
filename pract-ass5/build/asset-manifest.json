@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3cec67c.css",
+    "main.js": "/static/js/main.1ac1fc85.js",
+    "static/js/787.3a3cc4f3.chunk.js": "/static/js/787.3a3cc4f3.chunk.js",
+    "static/media/avtar1.jpg": "/static/media/avtar1.1d5a6f7a6005799c8cca.jpg",
+    "static/media/avtar2.jpg": "/static/media/avtar2.ca549fe2ecf1844368ec.jpg",
+    "static/media/avtar3.jpg": "/static/media/avtar3.56846be683350f50a404.jpg",
+    "static/media/avtar5.jpg": "/static/media/avtar5.8d8faed4b80391805571.jpg",
+    "static/media/avtar4.jpg": "/static/media/avtar4.70809b537efc1eab9203.jpg",
+    "static/media/avtar6.jpg": "/static/media/avtar6.51c0308042fae74bccba.jpg",
+    "index.html": "/index.html",
+    "static/media/down.svg": "/static/media/down.c3e123cf78bc368a192f3e2dee97daba.svg",
+    "main.f3cec67c.css.map": "/static/css/main.f3cec67c.css.map",
+    "main.1ac1fc85.js.map": "/static/js/main.1ac1fc85.js.map",
+    "787.3a3cc4f3.chunk.js.map": "/static/js/787.3a3cc4f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3cec67c.css",
+    "static/js/main.1ac1fc85.js"
+  ]
+}

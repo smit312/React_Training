@@ -45,8 +45,9 @@ function App() {
                   </div>
                   <br /> <div className="vl"></div>
                   <div className="montclick">
-                    {inHover.monthly}
-                     <div className="mont" >Monthly Clicks</div>
+
+                    5000
+          <div className="mont" >Monthly Clicks</div>
                   </div>
                 </h3>
               </center>
