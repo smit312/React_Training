@@ -1,13 +1,20 @@
 const initialstate = {
   data: {},
+  isLogin: false,
 };
 
 const ChangePages = (state = initialstate, action) => {
   switch (action.type) {
     case "LOGIN":
-      return { data: action.payload };
+      return {
+        isLogin: true,
+        data: action.payload,
+      };
     case "LOGOUT":
-      return { data: {} };
+      return {
+        isLogin: false,
+        data: {},
+      };
     default:
       return state;
   }

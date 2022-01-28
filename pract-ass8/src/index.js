@@ -3,19 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { BrowserRouter } from "react-router-dom";
 import store from "./strore/store";
 import { Provider } from "react-redux";
-import { Signup } from "./signup";
 
 store.subscribe(() => console.log(store.getState()));
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Provider store={store}>
       <App />
-      <Signup />
     </Provider>
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

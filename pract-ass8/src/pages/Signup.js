@@ -1,54 +1,72 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
-import imgs from "./assets/images/img.png";
+import imgs from "../assets/images/img.png";
 import { useDispatch } from "react-redux";
-import { Login } from "./strore/actions";
-
-const SignupSchema = Yup.object().shape({
-  name: Yup.string()
-    .max(15, "must be 15 character")
-    .min(15, "enter 15 chaeacter")
-    .required("required"),
-  email: Yup.string().email("email is invalid").required("required"),
-  phonenumber: Yup.string()
-    .max(10, "number must be lenght of 10")
-    .min(10, "number must be lenght of 10 "),
-
-  password: Yup.string().required("Password is required"),
-  cpassword: Yup.string().oneOf(
-    [Yup.ref("password"), null],
-    "Passwords must match"
-  ),
-});
+import { Login } from "../strore/actions";
+import { useNavigate } from "react-router-dom";
+import { SignupSchema } from "./validation/validationSchema";
 
 export const Signup = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const fileRef = useRef();
   return (
     <div className="con">
       <div className="container">
         <h1>Signup</h1>
         <Formik
           initialValues={{
+            profile: null,
             name: "",
             email: "",
             phonenumber: "",
             password: "",
             cpassword: "",
           }}
-          validationSchema={SignupSchema}
+          validationSchema={SignupSchema} //validate schema
           onSubmit={(values) => {
             // same shape as initial values
             console.log(values);
-            dispatch(Login(values));
+            // dispatch(Login(values));
+            dispatch(
+              Login({
+                name: values.name,
+                profile: URL.createObjectURL(values.profile),
+                email: values.email,
+                phonenumber: values.phonenumber,
+                password: values.password,
+                cpassword: values.cpassword,
+              })
+            );
+            navigate("/home");
           }}
         >
-          {({ errors, touched }) => (
+          {({ values, errors, touched, setFieldValue }) => (
             <Form>
               <br />
-              <button className="btn">photo+</button>
-              <br />
-              <input type="file" id="img" accept="image/*" />
+              <input
+                hidden
+                ref={fileRef}
+                accept="image/*"
+                id="profile"
+                type="file"
+                name="profile"
+                onChange={(e) => {
+                  setFieldValue("profile", e.target.files[0]);
+                }}
+              />
+              {errors.profile && touched.profile ? (
+                <div>{errors.profile}</div>
+              ) : null}
+              <button
+                className="btn"
+                onClick={() => {
+                  fileRef.current.click();
+                }}
+              >
+                photo+
+              </button>
+              {/* <input type="file" id="profile" name="profile" accept="image/*" /> */}
               <p>
                 {" "}
                 <label htmlFor="name">First Name</label>
@@ -86,10 +104,17 @@ export const Signup = () => {
                 <div>{errors.cpassword}</div>
               ) : null}
               <div className="flex-container">
+                {" "}
                 <button type="submit" className="btn-submit">
                   submit
                 </button>
-                <button type="reset" className="btn-reset">
+                <button
+                  type="reset"
+                  className="btn-reset"
+                  onClick={() => {
+                    values = "";
+                  }}
+                >
                   reset
                 </button>
               </div>
