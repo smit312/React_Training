@@ -1,4 +1,4 @@
-#in this project practise about redux , localstorage , get data via api , search filter ,props ans simple todo list .
+#in this project practise about redux , localstorage , get data via api , search filter ,props ans simple todo list 
 
 # Getting Started with Create React App
 
