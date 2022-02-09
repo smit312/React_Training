@@ -1,3 +1,9 @@
+## in this project get data from the fakeapi and manage via axios 
+## for desining used - semantic ui 
+## redux for manage the state 
+## routes(for routing) 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
