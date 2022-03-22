@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "smit",
+      "username": "smitt",
+      "email": "smit3121@gmail.com",
+      "phone": 1234567890,
+      "id": 1
+    },
+    {
+      "name": "smit thakkar ",
+      "username": "smit31",
+      "email": "smit31@gmail.com",
+      "phone": "7458993625",
+      "id": 2
+    },
+    {
+      "name": "mitul",
+      "username": "mitulparmar",
+      "email": "mitul@gmail.com",
+      "phone": "8563625022",
+      "id": 3
+    },
+    {
+      "name": "adarsh",
+      "username": "adarsh",
+      "email": "adarsh@gmail.com",
+      "phone": "459633665656",
+      "id": 4
+    },
+    {
+      "name": "jeet",
+      "username": "jeet1",
+      "email": "jeet2gmail.com",
+      "phone": "124567890",
+      "id": 5
+    },
+    {
+      "name": "",
+      "username": "",
+      "email": "",
+      "phone": "",
+      "id": 6
+    }
+  ]
+}
